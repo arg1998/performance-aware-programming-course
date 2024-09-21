@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS // to ignore deprication warnings 
+
 #include <cstdio>
 #include <cstdlib>
 
@@ -309,7 +311,7 @@ int main(int argc, char** argv) {
     count = read_asm_binary_file("../homeworks/assignments/part1/listing_0038_many_register_mov", &l037_inst);
     debug_print_bytes(count, l037_inst);
 
-    processor x8086{.name = "Intel x8086"};
+    processor x8086{.name = (char*)"Intel x8086"};
     register_16b* reg = &x8086.reg_B;
 
     reg->x = 0xFFee;
